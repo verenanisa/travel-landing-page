@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+
+        <!-- My Own CSS -->
+        <link rel="stylesheet" href="css/app.css">
+
+        <!-- Fonts -->
+        <!-- Quicksand -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+        <!-- Baskerville -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+        <!-- Font Awesome 5.15.4 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+    </script>
+    
+    <body>
+        <!-- Header -->
+        <header>
+            <!-- Navbar -->
+            <div class="navbar-container">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-container">
+                    <nav class="nav-list">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#destination">Destination</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <div id="home" class="content">
+                <!-- article -->
+                <article class="bg">
+                    <div class="card">
+                        <h1>Travelling Around The World</h1>
+                        <p class="custom-style">
+                            We always make the best experience for our cutomers by always providing the best offers.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- article -->
+                <article id="destination">
+                    <div class="card">
+                        <div class="article">
+                            <div class="article-text">
+                                <h2 class="title">Best 4 Yearly Popular Destinations</h2>
+                                <p>
+                                    Want to join the masses at the year's most popular tourist destinations? Here's how to plan ahead for trips to the world's busiest tourist attractions.
+                                </p>
+                                <button>Discover Now</button>
+                            </div>
+                            <div class="article-image">
+                                <div class="image">
+                                    <img src="img/tower-bridge.jpg" alt="tower-bridge" class="featured-image"/>
+                                    <img src="img/arc-de-triomphe.jpg" alt="arc-de-triomphee" class="featured-image"/>
+                                </div>
+                                <div class="image">
+                                    <img src="img/thailand.jpg" alt="thailand" class="featured-image"/>
+                                    <img src="img/dubai.jpg" alt="dubai" class="featured-image"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Aside -->
+            <aside>
+                <div class="social-media">
+                    <ul>
+                        <!-- Foto di dalam aside -->
+                        <li>
+                            <img src="img/foto.jpg" alt="foto">
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Footer -->
+        <footer id="contact">
+            <p>Belajar Dasar Pemrograman Web; 2024, Dicoding Academy</p>
+        </footer>
+
+    </body>
+</html>

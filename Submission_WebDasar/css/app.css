@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+
+    height: 100vh;
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+header .navbar-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding-block: 1rem;
+    position: fixed;
+    background: rgba(63,61,83, 0.2);
+}
+
+header .navbar-container .logo-container{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+header .navbar-container .logo-container .logo img{
+    width: 150px;
+    background-color: aliceblue;
+}
+
+header .navbar-container .list-container{
+    flex-grow: 2;
+    align-items: center;
+}
+
+header .navbar-container .list-container .nav-list ul {
+    padding-inline: 10rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 2rem;
+}
+header .navbar-container .list-container .nav-list li {
+    list-style-type: none;
+}
+
+header .navbar-container .list-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+}
+
+header .navbar-container .list-container .nav-list li a:hover{
+    text-shadow: 0px 0px 20px #363636;
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+h1{
+    font-size: 3em;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: 0px 0px 10px #111111;
+}
+
+.custom-style{
+    text-shadow: 0px 0px 2px #111111;
+}
+
+.content{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+    
+}
+.card{
+    padding: 5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 10px;
+    height: 40rem;
+    justify-content: center;
+    align-items: start;
+}
+
+.bg{
+    width: 100%;
+    margin-top: 0;
+    background-image: url(/img/landscape-336542.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    background-size: cover;
+    color: white;
+}
+
+.article{
+    display: flex;  
+    align-items: center;
+}
+
+h2{
+    font: normal 700 2.5em "Libre Baskerville", serif;
+}
+
+main .article-image{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+main .image{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+main .featured-image {
+    width: 200px;
+    height: 210px;
+    object-fit: cover;
+    object-position: center;
+}
+
+button{
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    margin-block-start: 1rem;
+    background-color: rgb(63,61,83);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+button:hover {
+    background-color: rgb(47, 46, 64);
+    box-shadow: 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+main aside {
+    position:fixed;
+    inset-block: 0;
+    inset-inline-start: 30px;
+}
+
+main aside .social-media img{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    display: flex;  flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border-radius: 20px;
+    background: rgba(63,61,83, 0.2);
+}
+
+main aside .social-media ul:hover {
+    box-shadow: 0 4px 8px 0 rgba(63,61,83, 0.2); 
+    background: rgba(63,61,83, 0.5);
+}
+
+main aside .social-media li {
+    list-style-type: none;
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    transition: all 0.1s ease-in-out;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #1d1b2f;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+    header .navbar-container {
+        flex-direction: column;
+        column-gap: 0.5rem;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+    main .content {
+        gap: 2rem;
+    }
+    main .content .article-image {
+        order: -1;
+    }
+
+    main .article{
+        flex-direction: column;
+    }
+    .card{
+        text-align: center;
+        padding: 6rem;
+    }
+
+    main .featured-image {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
